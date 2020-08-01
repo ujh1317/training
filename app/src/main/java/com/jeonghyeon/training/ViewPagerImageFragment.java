@@ -12,9 +12,10 @@ import androidx.fragment.app.Fragment;
 
 public class ViewPagerImageFragment extends Fragment{
 
-    public static ViewPagerImageFragment newInstance() {
+    public static ViewPagerImageFragment newInstance(int imageUrl) {
         
         Bundle args = new Bundle();
+        args.putInt("imageUrl", imageUrl);
         
         ViewPagerImageFragment fragment = new ViewPagerImageFragment();
         fragment.setArguments(args);
