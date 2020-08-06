@@ -6,6 +6,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
 public class ViewPagerAdapter extends FragmentStatePagerAdapter {
+
+    int image[] = {R.drawable.image_4, R.drawable.image_5, R.drawable.image_6};
     public ViewPagerAdapter(@NonNull FragmentManager fm) {
         super(fm);
     }
@@ -18,6 +20,6 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public int getCount() {
-        return 0;
+        return image.length;
     }
 }
