@@ -15,7 +15,7 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
     @NonNull
     @Override
     public Fragment getItem(int position) {
-        return null;
+        return new ViewPagerImageFragment().newInstance(image[position]);
     }
 
     @Override
