@@ -5,7 +5,16 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
+
 public class MyRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+
+    private ArrayList<MemberDTO> memberDTOs = new ArrayList<>();
+    public MyRecyclerViewAdapter() {
+        memberDTOs.add(new MemberDTO(R.drawable.image_1,"1","hihi"));
+
+    }
+
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
