@@ -12,6 +12,8 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.Vie
     private ArrayList<MemberDTO> memberDTOs = new ArrayList<>();
     public MyRecyclerViewAdapter() {
         memberDTOs.add(new MemberDTO(R.drawable.image_1,"1","hihihi"));
+        memberDTOs.add(new MemberDTO(R.drawable.image_1,"2","hahahah"));
+        memberDTOs.add(new MemberDTO(R.drawable.image_1,"3","byebyebye"));
 
     }
 
