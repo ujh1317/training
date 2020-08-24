@@ -31,7 +31,6 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.Vie
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         // 데이터를 넣어주는 부분
-
     }
 
     @Override
@@ -43,8 +42,15 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.Vie
 
     private class Rowcell extends RecyclerView.ViewHolder {
 
+        CircleImageView circleImageView;
+        TextView name;
+        TextView message;
+
         public Rowcell(View view) {
             super(view);
+            circleImageView = view.findViewById(R.id.profile_image);
+            name = view.findViewById(R.id.name);
+            message = view.findViewById(R.id.message);
         }
     }
 }
