@@ -31,16 +31,20 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.Vie
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         // 데이터를 넣어주는 부분
+        ((Rowcell)holder).circleImageView.setImageResource(memberDTOs.get(position).image);
+        ((Rowcell)holder).name.setText(memberDTOs.get(position).name);
+        ((Rowcell)holder).message.setText(memberDTOs.get(position).message);
     }
 
     @Override
     public int getItemCount() {
         // 카운터
 
-        return 0;
+        return memberDTOs.size();
     }
 
-    private class Rowcell extends RecyclerView.ViewHolder {
+    // 소스코드를 절약해주는 부분
+    private static class Rowcell extends RecyclerView.ViewHolder {
 
         CircleImageView circleImageView;
         TextView name;
