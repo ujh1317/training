@@ -3,6 +3,7 @@ package com.jeonghyeon.recyclerviewlist;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -31,7 +32,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.Vie
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         // 데이터를 넣어주는 부분
-        ((Rowcell)holder).circleImageView.setImageResource(memberDTOs.get(position).image);
+        ((Rowcell)holder).imageView.setImageResource(memberDTOs.get(position).image);
         ((Rowcell)holder).name.setText(memberDTOs.get(position).name);
         ((Rowcell)holder).message.setText(memberDTOs.get(position).message);
     }
@@ -46,13 +47,13 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.Vie
     // 소스코드를 절약해주는 부분
     private static class Rowcell extends RecyclerView.ViewHolder {
 
-        CircleImageView circleImageView;
+        ImageView imageView;
         TextView name;
         TextView message;
 
         public Rowcell(View view) {
             super(view);
-            circleImageView = view.findViewById(R.id.profile_image);
+            imageView = view.findViewById(R.id.profile_image);
             name = view.findViewById(R.id.name);
             message = view.findViewById(R.id.message);
         }
