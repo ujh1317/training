@@ -20,16 +20,21 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.Vie
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        // xml 셋팅
+
         return null;
     }
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
 
+        // 아이템 셋팅
     }
 
     @Override
     public int getItemCount() {
+
+        // 이미지 카운터
         return 0;
     }
 }
