@@ -1,6 +1,10 @@
 package com.jeonghyeon.cardview;
 
+import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -21,8 +25,8 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.Vie
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         // xml 셋팅
-
-        return null;
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview_item,parent,false);
+        return new RowCell(view);
     }
 
     @Override
@@ -35,6 +39,19 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.Vie
     public int getItemCount() {
 
         // 이미지 카운터
-        return 0;
+        return cardViewItemDTOs.size();
+    }
+
+    private class RowCell extends RecyclerView.ViewHolder {
+        public ImageView imageView;
+        public TextView title;
+        public TextView subtitle;
+
+        public RowCell(View view) {
+            super(view);
+            imageView = view.findViewById(R.id.cardview_imageview);
+            title = view.findViewById(R.id.cardview_title);
+            subtitle = view.findViewById(R.id.cardview_subtitle);
+        }
     }
 }
