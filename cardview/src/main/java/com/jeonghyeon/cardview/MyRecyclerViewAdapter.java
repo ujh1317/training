@@ -26,12 +26,16 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.Vie
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         // xml 셋팅
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview_item,parent,false);
+
         return new RowCell(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
 
+        ((RowCell)holder).imageView.setImageResource(cardViewItemDTOs.get(position).imageview);
+        ((RowCell)holder).title.setText(cardViewItemDTOs.get(position).title);
+        ((RowCell)holder).subtitle.setText(cardViewItemDTOs.get(position).subtitle);
         // 아이템 셋팅
     }
 
