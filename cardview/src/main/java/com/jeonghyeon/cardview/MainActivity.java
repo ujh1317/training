@@ -1,6 +1,7 @@
 package com.jeonghyeon.cardview;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
@@ -13,5 +14,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         RecyclerView view = findViewById(R.id.main_recyclerview);
+        view.setLayoutManager(new LinearLayoutManager(this));
+        view.setAdapter(new MyRecyclerViewAdapter());
     }
 }
