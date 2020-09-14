@@ -45,8 +45,8 @@
                 android:src="@android:drawable/ic_menu_delete"
                 android:layout_below="@+id/cardview_imageview"
                 android:layout_alignParentRight="true"
-                android:layout_margin="5dp"
-
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
                 />
 
         </RelativeLayout>
