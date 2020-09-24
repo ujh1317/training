@@ -12,11 +12,13 @@
         <TextView
             android:text="main"
             android:textSize="20sp"
+            android:textColor="@android:color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             />
-        <ImageView
+        <ImageButton
+            android:id="@+id/toolbar_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
