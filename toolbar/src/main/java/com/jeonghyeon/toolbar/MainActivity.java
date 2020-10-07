@@ -1,7 +1,9 @@
 package com.jeonghyeon.toolbar;
 
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.os.Bundle;
 import android.view.View;
@@ -24,5 +26,11 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "아직 도착한 메세지가 없습니다.", Toast.LENGTH_SHORT).show();
             }
         });
+
+        DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, 0, 0);
+        drawerLayout.setDrawerListener(actionBarDrawerToggle);
+        actionBarDrawerToggle.syncState();
+
     }
 }
