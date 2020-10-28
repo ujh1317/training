@@ -1,11 +1,13 @@
 package com.jeonghyeon.toolbar;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
@@ -35,6 +37,12 @@ public class MainActivity extends AppCompatActivity {
         actionBarDrawerToggle.syncState();
 
         NavigationView navigationView = findViewById(R.id.main_navigationView);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                return false;
+            }
+        });
 
     }
 }
