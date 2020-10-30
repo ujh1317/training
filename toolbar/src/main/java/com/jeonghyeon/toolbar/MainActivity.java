@@ -43,6 +43,9 @@ public class MainActivity extends AppCompatActivity {
                 if (menuItem.getItemId() == R.id.first) {
                     System.out.println("공지사항 클릭");
                 }
+                if (menuItem.getItemId() == R.id.second) {
+                    System.out.println("사진 클릭");
+                }
 
                 return false;
             }
