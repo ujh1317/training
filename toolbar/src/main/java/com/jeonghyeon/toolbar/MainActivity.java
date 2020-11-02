@@ -41,10 +41,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 if (menuItem.getItemId() == R.id.first) {
-                    System.out.println("공지사항 클릭");
+                    // 화면전환코드
                 }
                 if (menuItem.getItemId() == R.id.second) {
-                    System.out.println("사진 클릭");
+                    // 화면전환코드
                 }
 
                 return false;
