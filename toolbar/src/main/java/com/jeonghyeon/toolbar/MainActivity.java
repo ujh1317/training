@@ -4,9 +4,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
@@ -46,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
                 if (menuItem.getItemId() == R.id.second) {
                     // 화면전환코드
                 }
+                drawerLayout.closeDrawer(GravityCompat.START);
 
                 return false;
             }
