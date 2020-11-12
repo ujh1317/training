@@ -7,6 +7,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.app.Fragment;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
@@ -44,9 +45,11 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 if (menuItem.getItemId() == R.id.first) {
                     // 화면전환코드
+                    getFragmentManager().beginTransaction().replace(R.id.main_framelayout, new Fragment()).commit();
                 }
                 if (menuItem.getItemId() == R.id.second) {
                     // 화면전환코드
+                    getFragmentManager().beginTransaction().replace(R.id.main_framelayout, new Fragment()).commit();
                 }
                 drawerLayout.closeDrawer(GravityCompat.START);
 
