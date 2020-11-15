@@ -42,14 +42,14 @@ public class MainActivity extends AppCompatActivity {
         NavigationView navigationView = findViewById(R.id.main_navigationView);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                if (menuItem.getItemId() == R.id.first) {
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                if (item.getItemId() == R.id.first) {
                     // 화면전환코드
-                    getFragmentManager().beginTransaction().replace(R.id.main_framelayout, new Fragment()).commit();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.main_framelayout, new FirstFragment()).commit();
                 }
-                if (menuItem.getItemId() == R.id.second) {
+                if (item.getItemId() == R.id.second) {
                     // 화면전환코드
-                    getFragmentManager().beginTransaction().replace(R.id.main_framelayout, new Fragment()).commit();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.main_framelayout, new SecondFragment()).commit();
                 }
                 drawerLayout.closeDrawer(GravityCompat.START);
 
