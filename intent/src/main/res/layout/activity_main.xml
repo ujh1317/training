@@ -26,7 +26,7 @@
         android:backgroundTint="#FFFFFF"
         android:ems="10"
         android:hint="비밀번호를 입력해 주세요."
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/button"
