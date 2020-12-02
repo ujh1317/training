@@ -16,7 +16,9 @@ public class NextActivity extends AppCompatActivity {
         setContentView(R.layout.activity_next);
 
         Button button = findViewById(R.id.btnlogin);
-        EditText editText = findViewById(R.id.editText_id);
+        EditText id = findViewById(R.id.editText_id);
+        EditText password = findViewById(R.id.editText_password);
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
