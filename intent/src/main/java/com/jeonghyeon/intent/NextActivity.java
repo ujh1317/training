@@ -17,14 +17,16 @@ public class NextActivity extends AppCompatActivity {
 
         Button button = findViewById(R.id.btnlogin);
         EditText id = findViewById(R.id.editText_id);
-        EditText password = findViewById(R.id.editText_password);
+        final EditText password = findViewById(R.id.editText_password);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), NextActivity.class);
 
-                startActivity(intent);
+                if(password.getText().toString().equals("1234")) {
+                    Intent intent = new Intent(v.getContext(), NextActivity.class);
+                    startActivity(intent);
+                }
             }
         });
 
