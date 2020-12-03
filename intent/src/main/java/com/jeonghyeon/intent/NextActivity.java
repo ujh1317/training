@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class NextActivity extends AppCompatActivity {
 
@@ -25,7 +26,9 @@ public class NextActivity extends AppCompatActivity {
 
                 if(password.getText().toString().equals("1234")) {
                     Intent intent = new Intent(v.getContext(), NextActivity.class);
+                    intent.putExtra("id","이름");
                     startActivity(intent);
+                }else{
                 }
             }
         });
