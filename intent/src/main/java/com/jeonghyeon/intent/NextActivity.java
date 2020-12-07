@@ -18,6 +18,7 @@ public class NextActivity extends AppCompatActivity {
         setContentView(R.layout.activity_next);
 
         TextView textView = findViewById(R.id.user_name);
+        textView.setText(getIntent().getStringExtra("id"));
 
     }
 }
