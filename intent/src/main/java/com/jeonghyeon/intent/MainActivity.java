@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-            Button button = findViewById(R.id.btnlogin);
+            Button button = findViewById(R.id.btn_login);
             final EditText id = findViewById(R.id.editText_id);
             final EditText password = findViewById(R.id.editText_password);
 

@@ -20,5 +20,12 @@ public class NextActivity extends AppCompatActivity {
         TextView textView = findViewById(R.id.user_name);
         textView.setText(getIntent().getStringExtra("id"));
 
+        Button button = findViewById(R.id.btn_close);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 }
