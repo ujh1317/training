@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.Manifest;
 import android.os.Bundle;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -13,7 +15,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
     void requirePermission(){
-        String [] permission = new String[] {Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE};
+        String [] permissions = new String[] {Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE};
+
+        ArrayList<String> listPermissionsNeeded = new ArrayList<>();
+
+        for(String permission :permissions){
+
+        }
 
     }
 }
