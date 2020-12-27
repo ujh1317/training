@@ -1,8 +1,10 @@
 package com.jeonghyeon.permission;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.Manifest;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 
 import java.util.ArrayList;
@@ -20,7 +22,9 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<String> listPermissionsNeeded = new ArrayList<>();
 
         for(String permission :permissions){
-
+            if(ContextCompat.checkSelfPermission(this,permission) == PackageManager.PERMISSION_DENIED){
+                listPermissionsNeeded.add(permission);
+            }
         }
 
     }
