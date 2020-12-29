@@ -1,6 +1,7 @@
 package com.jeonghyeon.permission;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
@@ -23,9 +24,13 @@ public class MainActivity extends AppCompatActivity {
 
         for(String permission :permissions){
             if(ContextCompat.checkSelfPermission(this,permission) == PackageManager.PERMISSION_DENIED){
+                //권한이 허가되지 않은 경우
                 listPermissionsNeeded.add(permission);
             }
         }
-
+        if(!listPermissionsNeeded.isEmpty()){
+            //권한 요청
+            ActivityCompat.requestPermissions(this, listPermissionsNeeded.toArray(new String[listPermissionsNeeded.size()]),1);
+        }
     }
 }
