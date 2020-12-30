@@ -16,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        requirePermission();
     }
     void requirePermission(){
         String [] permissions = new String[] {Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE};
@@ -24,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         for(String permission :permissions){
             if(ContextCompat.checkSelfPermission(this,permission) == PackageManager.PERMISSION_DENIED){
-                //권한이 허가되지 않은 경우
+                //권한이 허가되지 않은 경우 요청할 권한 모집
                 listPermissionsNeeded.add(permission);
             }
         }
