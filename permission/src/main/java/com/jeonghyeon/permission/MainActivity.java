@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                boolean camera = ContextCompat.checkSelfPermission(v.getContext(),Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED;
+
             }
         });
     }
