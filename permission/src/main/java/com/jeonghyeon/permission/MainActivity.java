@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 boolean camera = ContextCompat.checkSelfPermission(v.getContext(),Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED;
+                boolean write = ContextCompat.checkSelfPermission(v.getContext(),Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
 
             }
         });
